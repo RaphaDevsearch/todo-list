@@ -12,6 +12,22 @@ class List:
     def set_status(self):
         self.status = False if self.status == True else False #toggle
     
+class TodoList:
+    def __init__(self):
+        self.lists      = []
+        self.pending    = []
+        self.done       = []
+
+    def add(self, List):
+        print("Add List to {lists}")
     
+    def delet(self, List):
+        print("Delet List from {list}")
+        
+    def show(self, lists):
+        print("show each Object in lists")
+
+    def analytics(self):
+        print("Analitics and data visualisation")    
     
     

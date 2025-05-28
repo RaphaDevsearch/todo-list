@@ -14,17 +14,25 @@ class List:
     
 class TodoList:
     def __init__(self):
+        self.my_item    = ""
         self.lists      = []
         self.pending    = []
         self.done       = []
 
-    def add(self, List):
+    def add(self):
+        description = "My first List"
+        list = List(description)
+        self.lists.append(list)
         print("Add List to {lists}")
     
-    def delet(self, List):
+    def delet(self):
+        index = 0
+        self.lists.remove(index)
         print("Delet List from {list}")
         
-    def show(self, lists):
+    def show(self):
+        for Ob in self.lists:
+            print(Ob)
         print("show each Object in lists")
 
     def analytics(self):
@@ -61,10 +69,10 @@ if __name__ == "__main__":
                     print("Bay ....")
                     break
                 case 1:
-                    tdl.add("List")
+                    tdl.add()
                 case 2 :
-                    tdl.delet("List")
+                    tdl.delet()
                 case 3:
-                    tdl.show(tdl.lists)
+                    tdl.show()
                 case 4:
                     tdl.analytics()

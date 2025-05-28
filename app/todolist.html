@@ -88,7 +88,8 @@
                                             Action
                                         </button>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#editTaskModal">Edit</a></li>
                                             <li><a class="dropdown-item" href="#">Remove</a></li>
                                             <li>
                                                 <hr class="dropdown-divider">
@@ -201,6 +202,46 @@
                         </div>
                     </div>
 
+                    <!-- Modal: Edit Task -->
+                    <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content">
+
+                                <!-- Modal Header -->
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editTaskModalLabel">Edit Task</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+                                <!-- Modal Body -->
+                                <div class="modal-body">
+                                    <form id="editTaskForm">
+                                        <div class="mb-3">
+                                            <label class="form-label">Current Task</label>
+                                            <input type="text" class="form-control" id="currentTask" readonly>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="updatedTask" class="form-label">New Description</label>
+                                            <input type="text" class="form-control" id="updatedTask"
+                                                placeholder="Update your task...">
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <!-- Modal Footer -->
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-success" id="saveEditBtn">Save Changes</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
 
                 </div>
 
@@ -233,9 +274,37 @@
                     </div>
                 </div>
 
-                <script src="./chart.js">
+                <script src="./chart.js"></script>
+                <script>
+                    let currentEditingElement = null;
 
+                    // When clicking Edit
+                    document.querySelectorAll('.edit-task-btn').forEach(button => {
+                        button.addEventListener('click', function (e) {
+                            const listItem = this.closest('.list-group-item');
+                            const taskText = listItem.querySelector('.task-text').textContent.trim();
+
+                            document.getElementById('currentTask').value = taskText;
+                            document.getElementById('updatedTask').value = "";
+                            currentEditingElement = listItem.querySelector('.task-text');
+                        });
+                    });
+
+                    // When clicking Save Changes
+                    document.getElementById('saveEditBtn').addEventListener('click', function () {
+                        const updated = document.getElementById('updatedTask').value.trim();
+                        if (updated && currentEditingElement) {
+                            currentEditingElement.textContent = updated;
+
+                            // Close modal
+                            const modal = bootstrap.Modal.getInstance(document.getElementById('editTaskModal'));
+                            modal.hide();
+                        } else {
+                            alert("Please enter a new task description.");
+                        }
+                    });
                 </script>
+
 
 
 

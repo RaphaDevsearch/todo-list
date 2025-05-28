@@ -10,11 +10,44 @@
 
 <body class="d-flex flex-column min-vh-100">
 
-    <!-- Header -->
-    <header class="bg-primary text-white text-center py-3">
-        <h1>📝 My To-Do List</h1>
-        <p class="lead">Stay organized, get things done!</p>
+    <!-- Header Navbar -->
+    <header class="bg-primary text-white py-3">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid d-flex justify-content-between align-items-center">
+
+                    <!-- Left: Logo -->
+                    <div class="d-flex align-items-center">
+                        <span class="navbar-brand fw-bold display-4">
+                            📝 To-Do App
+                        </span>
+
+                        <!-- Search Form -->
+                        <form class="d-flex ms-3 " role="search">
+                            <input class="form-control form-control-sm me-2 border-0" type="search" placeholder="Search tasks..."
+                                aria-label="Search">
+                            
+                        </form>
+                    </div>
+
+                    <!-- Right: Date -->
+                    <div class="text-end">
+                        <span id="currentDate" class="fw-light display-6"></span>
+                    </div>
+
+                </div>
+            </nav>
+        </div>
     </header>
+
+    <!-- JS for Date Display -->
+    <script>
+        const dateElement = document.getElementById("currentDate");
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const today = new Date().toLocaleDateString(undefined, options);
+        dateElement.textContent = today;
+    </script>
+
 
     <!-- Main Content -->
     <main class="container my-4 flex-grow-1">

@@ -275,39 +275,7 @@
                 </div>
 
                 <script src="./chart.js"></script>
-                <script>
-                    let currentEditingElement = null;
-
-                    // When clicking Edit
-                    document.querySelectorAll('.edit-task-btn').forEach(button => {
-                        button.addEventListener('click', function (e) {
-                            const listItem = this.closest('.list-group-item');
-                            const taskText = listItem.querySelector('.task-text').textContent.trim();
-
-                            document.getElementById('currentTask').value = taskText;
-                            document.getElementById('updatedTask').value = "";
-                            currentEditingElement = listItem.querySelector('.task-text');
-                        });
-                    });
-
-                    // When clicking Save Changes
-                    document.getElementById('saveEditBtn').addEventListener('click', function () {
-                        const updated = document.getElementById('updatedTask').value.trim();
-                        if (updated && currentEditingElement) {
-                            currentEditingElement.textContent = updated;
-
-                            // Close modal
-                            const modal = bootstrap.Modal.getInstance(document.getElementById('editTaskModal'));
-                            modal.hide();
-                        } else {
-                            alert("Please enter a new task description.");
-                        }
-                    });
-                </script>
-
-
-
-
+                
             </div>
         </div>
     </main>

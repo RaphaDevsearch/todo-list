@@ -39,6 +39,7 @@ def chose_menu():
     inputUser = int(input("Choce menu : "))
     
     return inputUser
+            
 
 if __name__ == "__main__":
     tdl = TodoList()
@@ -53,4 +54,17 @@ if __name__ == "__main__":
             break
         else :
             print("Action")
-        # action
+            # actions
+            
+            match inputUser:
+                case 0:
+                    print("Bay ....")
+                    break
+                case 1:
+                    tdl.add("List")
+                case 2 :
+                    tdl.delet("List")
+                case 3:
+                    tdl.show(tdl.lists)
+                case 4:
+                    tdl.analytics()

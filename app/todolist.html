@@ -60,7 +60,7 @@
 
                     <!-- Header: Filter Buttons -->
                     <div class="d-flex justify-content-start mb-3">
-                        <button class="btn btn-outline-warning me-2">Pending</button>
+                        <button class="btn btn-warning me-2">Pending</button>
                         <button class="btn btn-outline-success">Done</button>
                     </div>
 
@@ -68,96 +68,93 @@
                     <ul class="list-group mb-3">
 
                         <!-- Example Item -->
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="form-check">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="task1">
-                                <label class="form-check-label" for="task1">
-                                    Finish Bootstrap prototype
-                                </label>
-                            </div>
-                            <div>
-                                <!-- Example single danger button -->
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-primary dropdown-toggle"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Action
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item " href="#">Edit</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">Remove</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Help</a></li>
-                                    </ul>
-                                </div>
 
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="form-check">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="task1">
-                                <label class="form-check-label" for="task1">
-                                    Finish Bootstrap prototype
-                                </label>
-                            </div>
-                            <div>
-                                <!-- Example single danger button -->
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-primary dropdown-toggle"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Action
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item " href="#">Edit</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">Remove</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Help</a></li>
-                                    </ul>
-                                </div>
+                        <ul class="list-group mb-3">
 
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            <div class="form-check">
-                                <input class="form-check-input me-2" type="checkbox" value="" id="task1">
-                                <label class="form-check-label" for="task1">
-                                    Finish Bootstrap prototype
-                                </label>
-                            </div>
-                            <div>
-                                <!-- Example single danger button -->
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-primary dropdown-toggle"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        Action
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li>
-                                            <a class="dropdown-item " href="#">Edit</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="#">Remove</a>
-                                        </li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">Help</a></li>
-                                    </ul>
+                            <!-- Task 1 - Pending -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="form-check text-warning">
+                                    <input class="form-check-input me-2 border-warning" type="checkbox" value=""
+                                        id="task1">
+                                    <label class="form-check-label text-dark" for="task1">
+                                        Learn Bootstrap Basics <span
+                                            class="badge bg-warning text-dark ms-2">Pending</span>
+                                    </label>
                                 </div>
+                                <div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Remove</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Help</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
 
-                            </div>
-                        </li>
+                            <!-- Task 2 - Done -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="form-check text-success">
+                                    <input class="form-check-input me-2 border-success" type="checkbox" value=""
+                                        id="task2" checked>
+                                    <label class="form-check-label" for="task2">
+                                        Design Task UI <span class="badge bg-success ms-2">Done</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Remove</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Help</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <!-- Task 3 - Pending -->
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <div class="form-check text-warning">
+                                    <input class="form-check-input me-2 border-warning" type="checkbox" value=""
+                                        id="task3">
+                                    <label class="form-check-label text-dark" for="task3">
+                                        Add Chart.js Integration <span
+                                            class="badge bg-warning text-dark ms-2">Pending</span>
+                                    </label>
+                                </div>
+                                <div>
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-primary dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            Action
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                            <li><a class="dropdown-item" href="#">Remove</a></li>
+                                            <li>
+                                                <hr class="dropdown-divider">
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Help</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
 
                         <!-- You can duplicate the <li> for more tasks -->
 
@@ -199,7 +196,7 @@
                 </div>
 
                 <script src="./chart.js">
-                    
+
                 </script>
 
 

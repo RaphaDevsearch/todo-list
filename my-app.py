@@ -30,4 +30,27 @@ class TodoList:
     def analytics(self):
         print("Analitics and data visualisation")    
     
+
+
+def show_menu():
+    print("Our menu")
+
+def chose_menu():
+    inputUser = int(input("Choce menu : "))
     
+    return inputUser
+
+if __name__ == "__main__":
+    tdl = TodoList()
+    
+    while True:
+        # show menu
+        show_menu()
+        # uer choose meu
+        inputUser = chose_menu()
+        if inputUser == 0:
+            print("Bay ....")
+            break
+        else :
+            print("Action")
+        # action
